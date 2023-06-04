@@ -11,7 +11,7 @@ const inputParams :PutItemCommandInput = {
 
 const command : PutItemCommand = new PutItemCommand(inputParams);
 
-export const handler =async () => {
+export const handler = async () => {
     // DynamoDBテーブルの名前は環境変数から取得する
     return await ddbClient.send(command);
 }
