@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="dynamoDBにputする関数を追加">
-      <change afterPath="$PROJECT_DIR$/aws-stack/lib/putItem.ts" afterDir="false" />
+    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="scanのlambda関数作成">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aws-stack/lib/scanItem.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookShelf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookShelf.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,21 +37,25 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/s_eguchi/Practice/BookShelf/aws-stack/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/s_eguchi/Practice/BookShelf/aws-stack/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/s_eguchi/Practice/BookShelf/aws-stack/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/aws-stack/lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/aws-stack/lib" />
       <recent name="$PROJECT_DIR$/lambda" />
@@ -65,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685858655389</updated>
       <workItem from="1685858656400" duration="2546000" />
-      <workItem from="1685861214455" duration="5798000" />
+      <workItem from="1685861214455" duration="6379000" />
     </task>
     <task id="LOCAL-00001" summary="cdkプロジェクトの作成">
       <created>1685858904868</created>
@@ -95,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685865951832</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="dynamoDBにputとScanの権限を付与">
+      <created>1685867141802</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685867141802</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +119,8 @@
     <MESSAGE value="dynamoDBのスタックを追加" />
     <MESSAGE value="ライブラリの追加" />
     <MESSAGE value="dynamoDBにputする関数を追加" />
-    <option name="LAST_COMMIT_MESSAGE" value="dynamoDBにputする関数を追加" />
+    <MESSAGE value="dynamoDBにputとScanの権限を付与" />
+    <MESSAGE value="scanのlambda関数作成" />
+    <option name="LAST_COMMIT_MESSAGE" value="scanのlambda関数作成" />
   </component>
 </project>

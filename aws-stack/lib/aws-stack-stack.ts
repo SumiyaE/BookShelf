@@ -22,6 +22,12 @@ export class AwsStackStack extends Stack {
       runtime : Runtime.NODEJS_18_X,
     })
 
-    table.grantReadWriteData(putItemFunction)
+    const scanItemFunction = new NodejsFunction(this, 'scanItemFunction', {
+      entry : "lib/scanItem.ts",
+      runtime : Runtime.NODEJS_18_X,
+    })
+
+    table.grantWriteData(putItemFunction)
+    table.grantReadData(scanItemFunction)
   }
 }
