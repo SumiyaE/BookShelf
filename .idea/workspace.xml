@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="" />
+    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="cdkプロジェクトの作成">
+      <change afterPath="$PROJECT_DIR$/lambda/putItem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-stack/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +22,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="TypeScript File" />
       </list>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2QjEahwSKeRs5Bc8D1RnvAq6hzT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -29,6 +41,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/s_eguchi/Practice/BookShelf/aws-stack/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -40,10 +58,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1685858655389</updated>
+      <workItem from="1685858656400" duration="2546000" />
     </task>
+    <task id="LOCAL-00001" summary="cdkプロジェクトの作成">
+      <created>1685858904868</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685858904868</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cdkプロジェクトの作成" />
+    <option name="LAST_COMMIT_MESSAGE" value="cdkプロジェクトの作成" />
   </component>
 </project>
