@@ -4,71 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="lambdaEventのためのライブラリ追加">
-      <change afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/common/api-gateway.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/common/cloudfront.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/handler.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/alb.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/amplify-resolver.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/api-gateway-authorizer.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/api-gateway-proxy.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/appsync-resolver.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/autoscaling.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cdk-custom-resource.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cloudformation-custom-resource.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cloudfront-request.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cloudfront-response.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cloudwatch-events.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cloudwatch-logs.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/codebuild-cloudwatch-state.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/codecommit.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/codepipeline-cloudwatch-action.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/codepipeline-cloudwatch-pipeline.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/codepipeline-cloudwatch-stage.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/codepipeline-cloudwatch.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/codepipeline.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/_common.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/create-auth-challenge.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/custom-email-sender.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/custom-message.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/custom-sms-sender.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/define-auth-challenge.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/post-authentication.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/post-confirmation.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/pre-authentication.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/pre-signup.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/pre-token-generation.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/user-migration.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/cognito-user-pool-trigger/verify-auth-challenge-response.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/connect-contact-flow.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/dynamodb-stream.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/eventbridge.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/iot.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/kinesis-firehose-transformation.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/kinesis-stream.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/lex-v2.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/lex.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/msk.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/s3-batch.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/s3-event-notification.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/s3.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/secretsmanager.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/self-managed-kafka.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/ses.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/sns.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/@types/aws-lambda/trigger/sqs.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="API Gatewayの作成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws-stack/lib/putItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/lib/putItem.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws-stack/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws-stack/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +71,7 @@
       <workItem from="1685858656400" duration="2546000" />
       <workItem from="1685861214455" duration="6379000" />
       <workItem from="1685873836086" duration="40000" />
-      <workItem from="1685884640461" duration="5361000" />
+      <workItem from="1685884640461" duration="10350000" />
     </task>
     <task id="LOCAL-00001" summary="cdkプロジェクトの作成">
       <created>1685858904868</created>
@@ -170,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685867141802</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lambdaEventのためのライブラリ追加">
+      <created>1685892145566</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685892145566</updated>
+    </task>
+    <task id="LOCAL-00007" summary=".gitignoreの編集">
+      <created>1685892159617</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685892159617</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +136,9 @@
     <MESSAGE value="dynamoDBにputとScanの権限を付与" />
     <MESSAGE value="scanのlambda関数作成" />
     <MESSAGE value="lambdaEventのためのライブラリ追加" />
-    <option name="LAST_COMMIT_MESSAGE" value="lambdaEventのためのライブラリ追加" />
+    <MESSAGE value=".gitignoreの編集" />
+    <MESSAGE value="API Gatewayの作成" />
+    <option name="LAST_COMMIT_MESSAGE" value="API Gatewayの作成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

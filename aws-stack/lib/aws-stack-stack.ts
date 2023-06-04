@@ -1,4 +1,4 @@
-import { RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
+import { aws_apigateway, RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import { Runtime } from "aws-cdk-lib/aws-lambda";
@@ -26,6 +26,10 @@ export class AwsStackStack extends Stack {
       entry : "lib/scanItem.ts",
       runtime : Runtime.NODEJS_18_X,
     })
+
+    const ItemRestAPI = new aws_apigateway.RestApi(this,'ItemRestAPI',{})
+    ItemRestAPI.root.addMethod('GET',new aws_apigateway.LambdaIntegration(scanItemFunction));
+    ItemRestAPI.root.addMethod('PUT',new aws_apigateway.LambdaIntegration(putItemFunction));
 
     table.grantWriteData(putItemFunction)
     table.grantReadData(scanItemFunction)
