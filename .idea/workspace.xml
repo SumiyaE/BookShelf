@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="dynamoDBのスタックを追加">
+    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="dynamoDBにputする関数を追加">
       <change afterPath="$PROJECT_DIR$/aws-stack/lib/putItem.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws-stack/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws-stack/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685858655389</updated>
       <workItem from="1685858656400" duration="2546000" />
-      <workItem from="1685861214455" duration="4506000" />
+      <workItem from="1685861214455" duration="5798000" />
     </task>
     <task id="LOCAL-00001" summary="cdkプロジェクトの作成">
       <created>1685858904868</created>
@@ -90,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685861401676</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ライブラリの追加">
+      <created>1685865951832</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685865951832</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,8 +103,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cdkプロジェクトの作成" />
-    <MESSAGE value="ライブラリの追加" />
     <MESSAGE value="dynamoDBのスタックを追加" />
-    <option name="LAST_COMMIT_MESSAGE" value="dynamoDBのスタックを追加" />
+    <MESSAGE value="ライブラリの追加" />
+    <MESSAGE value="dynamoDBにputする関数を追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="dynamoDBにputする関数を追加" />
   </component>
 </project>

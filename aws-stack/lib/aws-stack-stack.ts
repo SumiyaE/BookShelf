@@ -7,15 +7,8 @@ import { AttributeType, Table } from "aws-cdk-lib/aws-dynamodb";
 export class AwsStackStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
-    //
-    // const queue = new sqs.Queue(this, 'AwsStackQueue', {
-    //   visibilityTimeout: Duration.seconds(300)
-    // });
-    //
-    // const topic = new sns.Topic(this, 'AwsStackTopic');
-    //
-    // topic.addSubscription(new subs.SqsSubscription(queue));
-    const tablle = new Table(this,"item",{
+
+    const table = new Table(this,"item",{
       partitionKey : {
         name : "ISBN",
         type : AttributeType.STRING
@@ -25,9 +18,10 @@ export class AwsStackStack extends Stack {
     })
 
     const putItemFunction = new NodejsFunction(this, 'putItemFunction', {
-      entry : "../lambda/putItem.ts",
+      entry : "lib/putItem.ts",
       runtime : Runtime.NODEJS_18_X,
-      handler : "putItem"
     })
+
+    table.grantReadWriteData(putItemFunction)
   }
 }
