@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="cdkプロジェクトの作成">
-      <change afterPath="$PROJECT_DIR$/lambda/putItem.ts" afterDir="false" />
+    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="dynamoDBのスタックを追加">
+      <change afterPath="$PROJECT_DIR$/aws-stack/lib/putItem.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws-stack/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/aws-stack/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,20 +37,27 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Users/s_eguchi/Practice/BookShelf/aws-stack/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/s_eguchi/Practice/BookShelf/aws-stack/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/aws-stack/lib" />
+      <recent name="$PROJECT_DIR$/lambda" />
+      <recent name="$PROJECT_DIR$/aws-stack" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="デフォルトタスク">
@@ -59,6 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685858655389</updated>
       <workItem from="1685858656400" duration="2546000" />
+      <workItem from="1685861214455" duration="4506000" />
     </task>
     <task id="LOCAL-00001" summary="cdkプロジェクトの作成">
       <created>1685858904868</created>
@@ -67,7 +76,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685858904868</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ライブラリの追加">
+      <created>1685861366090</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685861366090</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dynamoDBのスタックを追加">
+      <created>1685861401676</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685861401676</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,6 +98,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cdkプロジェクトの作成" />
-    <option name="LAST_COMMIT_MESSAGE" value="cdkプロジェクトの作成" />
+    <MESSAGE value="ライブラリの追加" />
+    <MESSAGE value="dynamoDBのスタックを追加" />
+    <option name="LAST_COMMIT_MESSAGE" value="dynamoDBのスタックを追加" />
   </component>
 </project>
