@@ -8,7 +8,19 @@ const inputParams :ScanCommandInput = {
 
 const command : ScanCommand = new ScanCommand(inputParams);
 
-export const handler =async () => {
+export const handler = async () => {
     // DynamoDBテーブルの名前は環境変数から取得する
-    return await ddbClient.send(command);
+    await ddbClient.send(command);
+    // const response = {
+    //     "statusCode": 200,
+    //     "headers": {
+    //         "Content-Type": "application/json"
+    //     },
+    //     "isBase64Encoded": false,
+    //     "multiValueHeaders": {
+    //         "X-Custom-Header": ["My value", "My other value"],
+    //     },
+    //     "body": "{\n  \"TotalCodeSize\": 104330022,\n  \"FunctionCount\": 26\n}"
+    // }
+    return response
 }
