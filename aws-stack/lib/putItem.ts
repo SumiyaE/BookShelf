@@ -3,19 +3,20 @@ import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 
 const ddbClient = new DynamoDBClient({});
 
-const inputParams :PutItemCommandInput = {
-    TableName: "items",
-    Item : {
-        "ISBN" : {S: "これじゃい！"}
-    }
-}
 
-const command : PutItemCommand = new PutItemCommand(inputParams);
 
 export const handler = async (event:APIGatewayProxyEvent) => {
     // DynamoDBテーブルの名前は環境変数から取得する
     const params = event.queryStringParameters;
     console.log(params)
+    // todo: Itemの型を調整
+    const inputParams :PutItemCommandInput = {
+        TableName: "items",
+        Item : {
+            "ISBN" : {S: params["isbn"]}
+        }
+    }
+    const command : PutItemCommand = new PutItemCommand(inputParams);
 
     await ddbClient.send(command);
 
