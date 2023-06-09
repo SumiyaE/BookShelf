@@ -11,6 +11,7 @@ const command : ScanCommand = new ScanCommand(inputParams);
 
 export const handler = async () :Promise<APIGatewayProxyResult> => {
     // DynamoDBテーブルの名前は環境変数から取得する
+    // const scanData = ItemRepository.scan();
     const scanData = await ddbClient.send(command);
     return {
         statusCode: 200,
@@ -20,3 +21,7 @@ export const handler = async () :Promise<APIGatewayProxyResult> => {
         body: JSON.stringify(scanData.Items)
     }
 }
+
+// export class ItemRepository {
+//
+// }
