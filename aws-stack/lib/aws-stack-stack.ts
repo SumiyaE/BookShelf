@@ -8,12 +8,12 @@ export class AwsStackStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    const table = new Table(this,"item",{
+    const table = new Table(this,"books",{
       partitionKey : {
         name : "ISBN",
         type : AttributeType.STRING
       },
-      tableName: "items",
+      tableName: "books",
       removalPolicy: RemovalPolicy.DESTROY
     })
 
