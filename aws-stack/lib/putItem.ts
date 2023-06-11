@@ -5,13 +5,12 @@ import { ItemRepository } from "./Repository/ItemRepository";
 const ddbClient = new DynamoDBClient({});
 
 
-
-export const handler = async (event:APIGatewayProxyEvent):Promise<APIGatewayProxyResult> => {
+export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
     // @ts-ignore
-    const isbn:string = event.queryStringParameters["isbn"];
+    const isbn: string = event.queryStringParameters["isbn"];
     const itemRepository = new ItemRepository(ddbClient)
     const result = await itemRepository.putItem(isbn);
-    if( result.$metadata.httpStatusCode != 200 ) throw new Error('失敗！')
+    if (result.$metadata.httpStatusCode != 200) throw new Error('失敗！')
 
     return {
         statusCode: 200,
