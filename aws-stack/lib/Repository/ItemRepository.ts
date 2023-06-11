@@ -5,9 +5,10 @@ import {
     ScanCommand,
     ScanCommandInput
 } from "@aws-sdk/client-dynamodb";
+import { ItemGateway } from "./ItemGateway";
 
-export class ItemRepository {
-    private readonly TABLE_NAME: string = 'books';
+export class ItemRepository implements ItemGateway {
+    readonly TABLE_NAME: string = 'books';
 
     constructor(private ddbClient: DynamoDBClient) {
     }
