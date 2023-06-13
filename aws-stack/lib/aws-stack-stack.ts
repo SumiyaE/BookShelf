@@ -34,6 +34,7 @@ export class AwsStackStack extends Stack {
             }
         })
 
+        // auroraServerless
         const cluster = new aws_rds.DatabaseCluster(this, 'Database', {
             engine: aws_rds.DatabaseClusterEngine.auroraMysql({ version: aws_rds.AuroraMysqlEngineVersion.VER_3_02_2 }),
             writer: aws_rds.ClusterInstance.serverlessV2('writer'),
@@ -45,6 +46,8 @@ export class AwsStackStack extends Stack {
             vpc,
             credentials:aws_rds.Credentials.fromSecret(secret)
         });
+
+        // dynamoDB
         const table = new Table(this, "books", {
             partitionKey: {
                 name: "ISBN",
