@@ -22,14 +22,14 @@ export class AwsStackStack extends Stack {
         })
 
         // secretManager
-        const Secret = new aws_secretsmanager.Secret(this,'dbSecret', {
+        const secret = new aws_secretsmanager.Secret(this,'dbSecret', {
             secretName: 'secret-test',
             generateSecretString: {
                 excludePunctuation: true,
                 includeSpace: false,
                 generateStringKey: 'password',
                 secretStringTemplate: JSON.stringify({
-                    username: 'hoge',
+                    user: 'mysql',
                 })
             }
         })
@@ -43,6 +43,7 @@ export class AwsStackStack extends Stack {
                 subnetType:aws_ec2.SubnetType.PRIVATE_ISOLATED
             },
             vpc,
+            credentials:aws_rds.Credentials.fromSecret(secret)
         });
         const table = new Table(this, "books", {
             partitionKey: {
