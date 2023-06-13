@@ -1,13 +1,45 @@
-import { aws_apigateway, RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
+import { aws_apigateway, aws_ec2, aws_rds, RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import { Runtime } from "aws-cdk-lib/aws-lambda";
 import { AttributeType, Table } from "aws-cdk-lib/aws-dynamodb";
+import { SubnetType } from "aws-cdk-lib/aws-ec2";
 
 export class AwsStackStack extends Stack {
     constructor(scope: Construct, id: string, props?: StackProps) {
         super(scope, id, props);
 
+        const vpc = new aws_ec2.Vpc(this,'bookShelfVPC',{
+            ipAddresses:aws_ec2.IpAddresses.cidr("1.0.0.0/16"),
+            vpcName: 'cdk-sample-vpc',
+            subnetConfiguration: [
+                {
+                    subnetType:SubnetType.PRIVATE_ISOLATED,
+                    name:"PrivateSubnet"
+                }
+            ]
+        })
+
+        // const aurora = new aws_rds.DatabaseCluster(this,'Cluster',{
+        //     engine:aws_rds.DatabaseClusterEngine.auroraMysql({ version: aws_rds.AuroraMysqlEngineVersion.VER_3_01_0 }),
+        //     writer:aws_rds.ClusterInstance.serverlessV2('writer'),
+        //     readers:[aws_rds.ClusterInstance.serverlessV2('read')],
+        //     vpcSubnets:{
+        //         subnetType:aws_ec2.SubnetType.PRIVATE_ISOLATED
+        //     },
+        //     vpc
+        // })
+
+        const cluster = new aws_rds.DatabaseCluster(this, 'Database', {
+            engine: aws_rds.DatabaseClusterEngine.auroraMysql({ version: aws_rds.AuroraMysqlEngineVersion.VER_3_02_2 }),
+            writer: aws_rds.ClusterInstance.serverlessV2('writer'),
+            serverlessV2MinCapacity: 0.5,
+            serverlessV2MaxCapacity: 2,
+            vpcSubnets:{
+                subnetType:aws_ec2.SubnetType.PRIVATE_ISOLATED
+            },
+            vpc,
+        });
         const table = new Table(this, "books", {
             partitionKey: {
                 name: "ISBN",
