@@ -35,14 +35,14 @@ export class AwsStackStack extends Stack {
 
         // auroraServerless
         new aws_rds.DatabaseCluster(this, 'Database', {
-            engine: aws_rds.DatabaseClusterEngine.auroraMysql({ version: aws_rds.AuroraMysqlEngineVersion.VER_3_02_2 }),
+            engine: aws_rds.DatabaseClusterEngine.auroraMysql({ version: aws_rds.AuroraMysqlEngineVersion.VER_3_02_2 }),// AuroraServerlessはVER_3_02以降でないと対応していないので注意
             writer: aws_rds.ClusterInstance.serverlessV2('writer'),
             serverlessV2MinCapacity: 0.5,
             serverlessV2MaxCapacity: 2,
+            vpc, // vpcにPRIVATE_ISOLATEDを指定している場合、以下のようにsubnetTypeを明示的にPRIVATE_ISOLATEDに指定しないとエラーになる。
             vpcSubnets:{
                 subnetType:aws_ec2.SubnetType.PRIVATE_ISOLATED
             },
-            vpc,
             credentials:aws_rds.Credentials.fromSecret(secret)
         });
 
