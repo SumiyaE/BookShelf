@@ -4,7 +4,6 @@ import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import { Runtime } from "aws-cdk-lib/aws-lambda";
 import { AttributeType, Table } from "aws-cdk-lib/aws-dynamodb";
 import { SubnetType } from "aws-cdk-lib/aws-ec2";
-import { SecretsManager } from "aws-sdk";
 
 export class AwsStackStack extends Stack {
     constructor(scope: Construct, id: string, props?: StackProps) {
@@ -35,7 +34,7 @@ export class AwsStackStack extends Stack {
         })
 
         // auroraServerless
-        const cluster = new aws_rds.DatabaseCluster(this, 'Database', {
+        new aws_rds.DatabaseCluster(this, 'Database', {
             engine: aws_rds.DatabaseClusterEngine.auroraMysql({ version: aws_rds.AuroraMysqlEngineVersion.VER_3_02_2 }),
             writer: aws_rds.ClusterInstance.serverlessV2('writer'),
             serverlessV2MinCapacity: 0.5,
