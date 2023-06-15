@@ -59,6 +59,7 @@ export class AwsStackStack extends Stack {
         const putItemFunction = new NodejsFunction(this, 'putItemFunction', {
             entry: "lib/putItem.ts",
             runtime: Runtime.NODEJS_18_X,
+            vpc:vpc
         })
 
         const scanItemFunction = new NodejsFunction(this, 'scanItemFunction', {
