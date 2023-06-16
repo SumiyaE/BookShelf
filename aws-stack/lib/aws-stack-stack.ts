@@ -34,7 +34,7 @@ export class AwsStackStack extends Stack {
         })
 
         // auroraServerless
-        new aws_rds.DatabaseCluster(this, 'Database', {
+        const auroraServerless = new aws_rds.DatabaseCluster(this, 'Database', {
             engine: aws_rds.DatabaseClusterEngine.auroraMysql({ version: aws_rds.AuroraMysqlEngineVersion.VER_3_02_2 }),// AuroraServerlessはVER_3_02以降でないと対応していないので注意
             writer: aws_rds.ClusterInstance.serverlessV2('writer'),
             serverlessV2MinCapacity: 0.5,
@@ -43,8 +43,10 @@ export class AwsStackStack extends Stack {
             vpcSubnets:{
                 subnetType:aws_ec2.SubnetType.PRIVATE_ISOLATED
             },
-            credentials:aws_rds.Credentials.fromSecret(secret)
+            credentials:aws_rds.Credentials.fromSecret(secret),
         });
+        const dbConnectionGroup = new ec2.SecurityGroup(this, "Lambda to DB",{vpc});
+        dbConnectionGroup.addIngressRule()
 
         // dynamoDB
         const table = new Table(this, "books", {
