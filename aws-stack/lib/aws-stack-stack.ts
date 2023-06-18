@@ -3,7 +3,7 @@ import { Construct } from 'constructs';
 import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 import { Runtime } from "aws-cdk-lib/aws-lambda";
 import { AttributeType, Table } from "aws-cdk-lib/aws-dynamodb";
-import { SubnetType } from "aws-cdk-lib/aws-ec2";
+import { Port, SubnetType } from "aws-cdk-lib/aws-ec2";
 
 export class AwsStackStack extends Stack {
     constructor(scope: Construct, id: string, props?: StackProps) {
@@ -43,10 +43,8 @@ export class AwsStackStack extends Stack {
             vpcSubnets:{
                 subnetType:aws_ec2.SubnetType.PRIVATE_ISOLATED
             },
-            credentials:aws_rds.Credentials.fromSecret(secret),
+            // credentials:aws_rds.Credentials.fromSecret(secret),
         });
-        const dbConnectionGroup = new ec2.SecurityGroup(this, "Lambda to DB",{vpc});
-        dbConnectionGroup.addIngressRule()
 
         // dynamoDB
         const table = new Table(this, "books", {
@@ -67,13 +65,19 @@ export class AwsStackStack extends Stack {
         const scanItemFunction = new NodejsFunction(this, 'scanItemFunction', {
             entry: "lib/scanItem.ts",
             runtime: Runtime.NODEJS_18_X,
+            vpc:vpc
         })
 
+        //
         const ItemRestAPI = new aws_apigateway.RestApi(this, 'ItemRestAPI', {})
         ItemRestAPI.root.addMethod('GET', new aws_apigateway.LambdaIntegration(scanItemFunction));
         ItemRestAPI.root.addMethod('PUT', new aws_apigateway.LambdaIntegration(putItemFunction));
 
         table.grantWriteData(putItemFunction)
         table.grantReadData(scanItemFunction)
+
+        // サービス間のsecurityGroupの作成
+        auroraServerless.connections.allowFrom(putItemFunction,Port.tcp(3306))
+        auroraServerless.connections.allowFrom(scanItemFunction,Port.tcp(3306))
     }
 }
