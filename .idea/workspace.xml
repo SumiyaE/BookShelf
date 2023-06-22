@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="test.drawioの作成">
+    <list default="true" id="06a01120-a210-4e7c-92ea-3635c6856f8b" name="変更" comment="scanのルールをコメントアウト">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/lib/aws-stack-stack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aws-stack/test.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/aws-stack/test.drawio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,9 @@
         <option value="TypeScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="true" />
@@ -96,7 +97,14 @@
       <workItem from="1686583863255" duration="216000" />
       <workItem from="1686584224148" duration="540000" />
       <workItem from="1686610758200" duration="69000" />
-      <workItem from="1686655878795" duration="8926000" />
+      <workItem from="1686655878795" duration="15800000" />
+      <workItem from="1686829626286" duration="2618000" />
+      <workItem from="1686926624774" duration="754000" />
+      <workItem from="1686969660747" duration="3004000" />
+      <workItem from="1686977416218" duration="7000" />
+      <workItem from="1686978854797" duration="1494000" />
+      <workItem from="1687097762227" duration="359000" />
+      <workItem from="1687445480637" duration="386000" />
     </task>
     <task id="LOCAL-00001" summary="cdkプロジェクトの作成">
       <created>1685858904868</created>
@@ -245,20 +253,90 @@
       <option name="project" value="LOCAL" />
       <updated>1686584644351</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="バージョンの更新">
+      <created>1686665603522</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1686665603522</updated>
+    </task>
+    <task id="LOCAL-00023" summary="auroraServerless v2のリソース作成">
+      <created>1686669039644</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1686669039644</updated>
+    </task>
+    <task id="LOCAL-00024" summary="secretManagerの作成">
+      <created>1686671264093</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1686671264093</updated>
+    </task>
+    <task id="LOCAL-00025" summary="secretManagerを編集">
+      <created>1686672297137</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1686672297137</updated>
+    </task>
+    <task id="LOCAL-00026" summary="コメントを追記">
+      <created>1686672367902</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1686672367902</updated>
+    </task>
+    <task id="LOCAL-00027" summary="修正">
+      <created>1686672413877</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1686672413877</updated>
+    </task>
+    <task id="LOCAL-00028" summary="コメント追加">
+      <created>1686672620598</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1686672620598</updated>
+    </task>
+    <task id="LOCAL-00029" summary="lambdaをvpc上に作成">
+      <created>1686830473048</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1686830473048</updated>
+    </task>
+    <task id="LOCAL-00030" summary="セキュリティグループの作成">
+      <created>1686927368338</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1686927368338</updated>
+    </task>
+    <task id="LOCAL-00031" summary="セキュリティグループの作成">
+      <created>1687094539777</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1687094539777</updated>
+    </task>
+    <task id="LOCAL-00032" summary="scanのルールをコメントアウト">
+      <created>1687445509112</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1687445509112</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cdkプロジェクトの作成" />
-    <MESSAGE value="dynamoDBのスタックを追加" />
-    <MESSAGE value="ライブラリの追加" />
-    <MESSAGE value="dynamoDBにputする関数を追加" />
-    <MESSAGE value="dynamoDBにputとScanの権限を付与" />
-    <MESSAGE value="scanのlambda関数作成" />
-    <MESSAGE value="lambdaEventのためのライブラリ追加" />
     <MESSAGE value=".gitignoreの編集" />
     <MESSAGE value="API Gatewayの作成" />
     <MESSAGE value="scanItemのproxy統合の型を作成" />
@@ -274,7 +352,17 @@
     <MESSAGE value="Usecase,Gatewayの実装" />
     <MESSAGE value="Usecaseから呼び出すように編集" />
     <MESSAGE value="test.drawioの作成" />
-    <option name="LAST_COMMIT_MESSAGE" value="test.drawioの作成" />
+    <MESSAGE value="バージョンの更新" />
+    <MESSAGE value="auroraServerless v2のリソース作成" />
+    <MESSAGE value="secretManagerの作成" />
+    <MESSAGE value="secretManagerを編集" />
+    <MESSAGE value="コメントを追記" />
+    <MESSAGE value="修正" />
+    <MESSAGE value="コメント追加" />
+    <MESSAGE value="lambdaをvpc上に作成" />
+    <MESSAGE value="セキュリティグループの作成" />
+    <MESSAGE value="scanのルールをコメントアウト" />
+    <option name="LAST_COMMIT_MESSAGE" value="scanのルールをコメントアウト" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
