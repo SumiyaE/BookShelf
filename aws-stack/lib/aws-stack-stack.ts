@@ -78,6 +78,6 @@ export class AwsStackStack extends Stack {
 
         // サービス間のsecurityGroupの作成
         auroraServerless.connections.allowFrom(putItemFunction,Port.tcp(3306))
-        auroraServerless.connections.allowFrom(scanItemFunction,Port.tcp(3306))
+        // auroraServerless.connections.allowFrom(scanItemFunction,Port.tcp(3306))
     }
 }
